@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       prevBtn.onclick = function (e) {
         e.preventDefault();
-        currentIndex = (currentIndex + 1) % items.length;
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
         setActive(currentIndex);
         bindPrevButton();
       };
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (text) {
-        text.textContent = isOpen ? "Close more" : "Load more";
+        text.textContent = isOpen ? "Show less" : "Load more";
       }
     });
   }
@@ -111,43 +111,3 @@ document.addEventListener("visibilitychange", function () {
   }
 });
 
-// ----- Title Flashing on Tab Switch -----
-(function () {
-  var originalTitle = document.title;
-  var flashInterval = null;
-  var preventFlashing = false;
-
-  function startFlashing() {
-    if (preventFlashing) return;
-    var isFlashing = false;
-    if (!flashInterval) {
-      flashInterval = setInterval(function () {
-        document.title = isFlashing ? "(1) New Message!" : originalTitle;
-        isFlashing = !isFlashing;
-      }, 1000);
-    }
-  }
-
-  function stopFlashing() {
-    if (flashInterval) {
-      clearInterval(flashInterval);
-      flashInterval = null;
-      document.title = originalTitle;
-    }
-  }
-
-  document.addEventListener("visibilitychange", function () {
-    if (document.hidden && !preventFlashing) {
-      startFlashing();
-    } else {
-      stopFlashing();
-    }
-  });
-
-  document.querySelectorAll("[data-stop-flashing='true']").forEach(function (button) {
-    button.addEventListener("click", function () {
-      preventFlashing = true;
-      stopFlashing();
-    });
-  });
-})();
