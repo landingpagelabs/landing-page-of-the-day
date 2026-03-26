@@ -21,117 +21,144 @@
   <meta name="twitter:description" content="Submit your landing page to be featured as Landing Page of the Day.">
 
   <link rel="icon" type="image/avif" href="https://lpl-client-research.b-cdn.net/lp-of-the-day/favicon-default.avif">
+  <link rel="shortcut icon" href="https://lpl-client-research.b-cdn.net/lp-of-the-day/favicon-default.avif">
   <link rel="apple-touch-icon" href="https://lpl-client-research.b-cdn.net/lp-of-the-day/favicon-default.avif">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="body">
+  <div class="page-wrapper">
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="header__inner">
-      <a href="/" class="header__logo">
-        <img src="https://lpl-client-research.b-cdn.net/lp-of-the-day/logo.avif" alt="Landing Page of the Day">
-      </a>
-      <nav class="header__nav" id="headerNav">
-        <a href="/form/" class="header__link">Submit Landing Page</a>
-        <a href="https://www.landingpagelabs.co/?ref=landingpageoftheday" class="header__cta" target="_blank" rel="noopener">Get Your Own Landing Page</a>
-      </nav>
-      <div class="menu-icon" id="menuIcon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile menu overlay -->
-  <div class="mobile-menu" id="mobileMenu">
-    <nav class="mobile-menu__nav">
-      <a href="/form/" class="mobile-menu__link">Submit Landing Page</a>
-      <a href="https://www.landingpagelabs.co/?ref=landingpageoftheday" class="mobile-menu__link" target="_blank" rel="noopener">Get Your Own Landing Page</a>
-    </nav>
-  </div>
-
-  <main>
-    <section class="form-page">
-      <div class="form-page__inner">
-        <div class="form-page__header">
-          <h1 class="form-page__title">Share your landing page. Get it seen.</h1>
-          <p class="form-page__text">Complete the form below and our team will review your submission. Get seen by marketers and founders visiting the site every day.</p>
-          <div class="form-page__stats">
-            <div class="form-page__stat">
-              <span class="form-page__stat-value">7+</span>
-              <span class="form-page__stat-label">Curated landing pages</span>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="header_wrapper">
+            <a href="/" class="header_logo">
+              <img src="https://lpl-client-research.b-cdn.net/lp-of-the-day/logo.avif" loading="lazy" alt="Landing Page of the Day" class="header_logo-img">
+            </a>
+            <div class="header_right">
+              <div class="header_menu">
+                <a href="/form/" class="header_cta white w-inline-block">
+                  <div class="label-small capitalize">Submit Landing Page</div>
+                </a>
+                <a href="https://www.landingpagelabs.co/?ref=landingpageoftheday" target="_blank" class="header_cta black w-inline-block">
+                  <div class="label-small capitalize white">Get Your Own Landing Page</div>
+                </a>
+              </div>
+              <div class="menu_icon-wrap">
+                <div class="menu_icon"><div></div></div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </header>
 
-        <form class="form" id="submitForm" action="https://formspree.io/f/xkopnpnl" method="POST">
-          <div class="form__group">
-            <label class="form__label" for="firstName">First Name</label>
-            <input class="form__input" type="text" id="firstName" name="firstName" required>
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="email">Work Email</label>
-            <input class="form__input" type="email" id="email" name="email" required>
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="url">Landing Page URL</label>
-            <input class="form__input" type="url" id="url" name="url" placeholder="https://" required>
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="builtOn">Built On</label>
-            <select class="form__input form__select" id="builtOn" name="builtOn">
-              <option value="">Select platform</option>
-              <option value="Webflow">Webflow</option>
-              <option value="WordPress">WordPress</option>
-              <option value="Framer">Framer</option>
-              <option value="Shopify">Shopify</option>
-              <option value="ClickFunnels">ClickFunnels</option>
-              <option value="Unbounce">Unbounce</option>
-              <option value="Custom">Custom / Other</option>
-            </select>
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="why">Why should this be LP of the Day?</label>
-            <textarea class="form__input form__textarea" id="why" name="why" rows="4" placeholder="What makes this landing page stand out?"></textarea>
-          </div>
-          <button type="submit" class="btn btn--shimmer btn--full">Submit Landing Page</button>
-        </form>
+    <!-- MAIN -->
+    <main class="main">
+      <section class="inner-page">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="form-page">
+              <a href="/" class="inner-page__back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.9987 12.6667L3.33203 8.00004L7.9987 3.33337" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.6654 8H3.33203" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to today's pick
+              </a>
 
-        <div class="form__success" id="formSuccess" style="display:none;">
-          <p>Thank you! Your submission has been received. We'll review it shortly.</p>
+              <h1 class="form-page__title">Share your landing page. Get it seen.</h1>
+              <p class="form-page__desc">Complete the form below and our team will review your submission. Get seen by marketers and founders visiting the site every day.</p>
+
+              <form class="form-page__form" id="submitForm" action="https://formspree.io/f/xkopnpnl" method="POST">
+                <div class="form-page__field">
+                  <label class="form-page__label" for="firstName">First Name</label>
+                  <input class="form-page__input" type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-page__field">
+                  <label class="form-page__label" for="email">Work Email</label>
+                  <input class="form-page__input" type="email" id="email" name="email" required>
+                </div>
+                <div class="form-page__field">
+                  <label class="form-page__label" for="url">Landing Page URL</label>
+                  <input class="form-page__input" type="url" id="url" name="url" placeholder="https://" required>
+                </div>
+                <div class="form-page__field">
+                  <label class="form-page__label" for="builtOn">Built On</label>
+                  <select class="form-page__input" id="builtOn" name="builtOn">
+                    <option value="">Select platform</option>
+                    <option value="Webflow">Webflow</option>
+                    <option value="WordPress">WordPress</option>
+                    <option value="Framer">Framer</option>
+                    <option value="Shopify">Shopify</option>
+                    <option value="ClickFunnels">ClickFunnels</option>
+                    <option value="Unbounce">Unbounce</option>
+                    <option value="Custom">Custom / Other</option>
+                  </select>
+                </div>
+                <div class="form-page__field">
+                  <label class="form-page__label" for="why">Why should this be LP of the Day?</label>
+                  <textarea class="form-page__textarea" id="why" name="why" rows="4" placeholder="What makes this landing page stand out?"></textarea>
+                </div>
+                <button type="submit" class="form-page__submit">Submit Landing Page</button>
+              </form>
+
+              <div id="formSuccess" style="display:none; margin-top: 24px; padding: 16px; background: #f0fdf4; border-radius: 8px; color: #166534;">
+                Thank you! Your submission has been received. We'll review it shortly.
+              </div>
+              <div id="formError" style="display:none; margin-top: 24px; padding: 16px; background: #fef2f2; border-radius: 8px; color: #991b1b;">
+                Something went wrong. Please try again or email us at hey@landingpagelabs.co.
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div class="form__error" id="formError" style="display:none;">
-          <p>Something went wrong. Please try again or email us at hey@landingpagelabs.co.</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="footer_wrapper">
+            <div class="footer_logo">
+              <img src="https://lpl-client-research.b-cdn.net/lp-of-the-day/logo.avif" loading="lazy" alt="Landing Page of the Day" class="footer_logo-img desktop">
+            </div>
+            <div class="footer_subtext-wrap">
+              <div class="body-regular gray-2">Landing Page Labs builds complete Google Ads systems for lead-gen businesses. We handle everything: high-converting landing pages, expert ad management and continuous optimisation.</div>
+            </div>
+            <div class="footer_menu">
+              <a href="/form/" class="header_cta white footer w-inline-block">
+                <div class="label-small capitalize fz-12">Submit Landing Page</div>
+              </a>
+              <a href="https://www.landingpagelabs.co/?ref=landingpageoftheday" target="_blank" class="header_cta black footer w-inline-block">
+                <div class="label-small capitalize white fz-12">Get Your Own Landing Page</div>
+              </a>
+            </div>
+            <div class="footer_copyright">
+              <div class="footer_copyright-text-wrap">
+                <div class="footer_copyright-logo">
+                  <img loading="lazy" src="https://lpl-client-research.b-cdn.net/lp-of-the-day/lpl-profile.avif" alt="" class="footer_copyright-img">
+                  <img loading="lazy" src="https://lpl-client-research.b-cdn.net/lp-of-the-day/lpl-linkedin.avif" alt="" class="footer_copyright-img footer_copyright-img-2">
+                </div>
+                <div class="footer_copyright-desktop">
+                  <a href="https://links.landingpagelabs.co/agencylister" target="_blank" class="body-regular gray-3">Built By Landing Page Labs</a>
+                </div>
+              </div>
+              <div class="body-regular gray-3">&copy; 2026 Landing Page of the Day</div>
+            </div>
+            <div class="footer_copyright-caption">
+              <div class="body-caption opacity-text">Note: this site uses affiliate links for sponsored posts. If you click a sponsored link we might get a small commission if you sign up.</div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__top">
-        <a href="/" class="footer__logo">
-          <img src="https://lpl-client-research.b-cdn.net/lp-of-the-day/logo.avif" alt="Landing Page of the Day">
-        </a>
-        <div class="footer__links">
-          <a href="/form/">Submit a Landing Page</a>
-          <a href="/privacy-policy/">Privacy Policy</a>
-          <a href="/terms/">Terms</a>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__credit">Built by <a href="https://www.landingpagelabs.co/?ref=landingpageoftheday" target="_blank" rel="noopener">Landing Page Labs</a></p>
-        <p class="footer__copyright">&copy; 2026 Landing Page of the Day</p>
-      </div>
-    </div>
-  </footer>
+      <div class="footer_rgb"></div>
+    </footer>
+  </div>
 
   <script src="/app.js"></script>
 </body>

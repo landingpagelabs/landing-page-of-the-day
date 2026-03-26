@@ -61,133 +61,151 @@
   </script>
 
   <link rel="icon" type="image/avif" href="https://lpl-client-research.b-cdn.net/lp-of-the-day/favicon-default.avif">
+  <link rel="shortcut icon" href="https://lpl-client-research.b-cdn.net/lp-of-the-day/favicon-default.avif">
   <link rel="apple-touch-icon" href="https://lpl-client-research.b-cdn.net/lp-of-the-day/favicon-default.avif">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="body">
+  <div class="page-wrapper">
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="header__inner">
-      <a href="/" class="header__logo">
-        <img src="https://lpl-client-research.b-cdn.net/lp-of-the-day/logo.avif" alt="Landing Page of the Day">
-      </a>
-      <nav class="header__nav" id="headerNav">
-        <a href="/form/" class="header__link">Submit Landing Page</a>
-        <a href="https://www.landingpagelabs.co/?ref=landingpageoftheday" class="header__cta" target="_blank" rel="noopener">Get Your Own Landing Page</a>
-      </nav>
-      <div class="menu-icon" id="menuIcon">
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="header_wrapper">
+            <a href="/" class="header_logo">
+              <img src="https://lpl-client-research.b-cdn.net/lp-of-the-day/logo.avif" loading="lazy" alt="Landing Page of the Day" class="header_logo-img">
+            </a>
+            <div class="header_right">
+              <div class="header_menu">
+                <a href="/form/" class="header_cta white w-inline-block">
+                  <div class="label-small capitalize">Submit Landing Page</div>
+                </a>
+                <a href="https://www.landingpagelabs.co/?ref=landingpageoftheday" target="_blank" class="header_cta black w-inline-block">
+                  <div class="label-small capitalize white">Get Your Own Landing Page</div>
+                </a>
+              </div>
+              <div class="menu_icon-wrap">
+                <div class="menu_icon"><div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Mobile menu overlay -->
-  <div class="mobile-menu" id="mobileMenu">
-    <nav class="mobile-menu__nav">
-      <a href="/form/" class="mobile-menu__link">Submit Landing Page</a>
-      <a href="https://www.landingpagelabs.co/?ref=landingpageoftheday" class="mobile-menu__link" target="_blank" rel="noopener">Get Your Own Landing Page</a>
-    </nav>
+    <!-- MAIN -->
+    <main class="main">
+      <section class="inner-page">
+        <div class="padding-global">
+          <div class="container-large">
+            <a href="/" class="inner-page__back">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.9987 12.6667L3.33203 8.00004L7.9987 3.33337" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.6654 8H3.33203" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Back to today's pick
+            </a>
+
+            <h1 class="inner-page__title">Mobbin</h1>
+
+            <div class="inner-page__screenshot">
+              <a href="https://www.mobbin.com?ref=landingpageoftheday" target="_blank" rel="noopener">
+                <img src="https://lpl-client-research.b-cdn.net/lp-of-the-day/mobbin.png" alt="Mobbin landing page screenshot" loading="eager">
+              </a>
+            </div>
+
+            <div class="inner-page__stats">
+              <div class="inner-page__stat">
+                <div class="inner-page__stat-label">Built On</div>
+                <div class="inner-page__stat-value">Custom</div>
+              </div>
+              <div class="inner-page__stat">
+                <div class="inner-page__stat-label">Monthly Visitors</div>
+                <div class="inner-page__stat-value">1,200,000</div>
+              </div>
+              <div class="inner-page__stat">
+                <div class="inner-page__stat-label">Avg. Visit Duration</div>
+                <div class="inner-page__stat-value">3 mins 45 secs</div>
+              </div>
+              <div class="inner-page__stat">
+                <div class="inner-page__stat-label">Featured</div>
+                <div class="inner-page__stat-value">January 26, 2026</div>
+              </div>
+            </div>
+
+            <div class="inner-page__why">
+              <div class="inner-page__why-label">Why It's LP Of The Day</div>
+              <div class="body-regular">Exceptional UX pattern library. The search and filtering experience is world-class, and the design showcases mobile patterns beautifully.</div>
+            </div>
+
+            <div class="inner-page__cta-wrap">
+              <a href="https://www.mobbin.com?ref=landingpageoftheday" class="hero_block-content-cta w-inline-block" target="_blank" rel="noopener">
+                <div class="label-small white fz-12">Visit Landing Page</div>
+                <div class="hero_block-content-cta-embed w-embed">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.1868 8.00001H2.34447" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                    <path d="M8.94336 3.28601L13.6574 8.00006L8.94336 12.7141" stroke="white" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </a>
+              <a href="/" class="header_cta white w-inline-block">
+                <div class="label-small capitalize">Back to Today's Pick</div>
+              </a>
+            </div>
+
+            <div class="inner-page__nav">
+              <div><a href="/winner/shorturl-com/">&larr; Shorturl.com</a></div>
+              <div><a href="/winner/galileo14/">Galileo14 &rarr;</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="footer_wrapper">
+            <div class="footer_logo">
+              <img src="https://lpl-client-research.b-cdn.net/lp-of-the-day/logo.avif" loading="lazy" alt="Landing Page of the Day" class="footer_logo-img desktop">
+            </div>
+            <div class="footer_subtext-wrap">
+              <div class="body-regular gray-2">Landing Page Labs builds complete Google Ads systems for lead-gen businesses. We handle everything: high-converting landing pages, expert ad management and continuous optimisation.</div>
+            </div>
+            <div class="footer_menu">
+              <a href="/form/" class="header_cta white footer w-inline-block">
+                <div class="label-small capitalize fz-12">Submit Landing Page</div>
+              </a>
+              <a href="https://www.landingpagelabs.co/?ref=landingpageoftheday" target="_blank" class="header_cta black footer w-inline-block">
+                <div class="label-small capitalize white fz-12">Get Your Own Landing Page</div>
+              </a>
+            </div>
+            <div class="footer_copyright">
+              <div class="footer_copyright-text-wrap">
+                <div class="footer_copyright-logo">
+                  <img loading="lazy" src="https://lpl-client-research.b-cdn.net/lp-of-the-day/lpl-profile.avif" alt="" class="footer_copyright-img">
+                  <img loading="lazy" src="https://lpl-client-research.b-cdn.net/lp-of-the-day/lpl-linkedin.avif" alt="" class="footer_copyright-img footer_copyright-img-2">
+                </div>
+                <div class="footer_copyright-desktop">
+                  <a href="https://links.landingpagelabs.co/agencylister" target="_blank" class="body-regular gray-3">Built By Landing Page Labs</a>
+                </div>
+              </div>
+              <div class="body-regular gray-3">&copy; 2026 Landing Page of the Day</div>
+            </div>
+            <div class="footer_copyright-caption">
+              <div class="body-caption opacity-text">Note: this site uses affiliate links for sponsored posts. If you click a sponsored link we might get a small commission if you sign up.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_rgb"></div>
+    </footer>
   </div>
-
-  <main>
-
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <div class="breadcrumb__inner">
-        <a href="/">Home</a>
-        <span class="breadcrumb__sep">/</span>
-        <span>Mobbin</span>
-      </div>
-    </nav>
-
-    <!-- Winner Detail -->
-    <section class="winner-detail">
-      <div class="winner-detail__inner">
-        <div class="winner-detail__date">Featured on January 26, 2026</div>
-        <h1 class="winner-detail__title">Mobbin</h1>
-
-        <div class="winner-detail__screenshot">
-          <a href="https://www.mobbin.com?ref=landingpageoftheday" target="_blank" rel="noopener">
-            <img src="https://lpl-client-research.b-cdn.net/lp-of-the-day/mobbin.png" alt="Mobbin landing page screenshot" loading="eager">
-          </a>
-        </div>
-
-        <div class="hero__stats">
-          <div class="hero__stat">
-            <span class="hero__stat-icon pulse-purple">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            </span>
-            <div class="hero__stat-content">
-              <span class="hero__stat-label">Built On</span>
-              <span class="hero__stat-value">Custom</span>
-            </div>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-icon pulse-green">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </span>
-            <div class="hero__stat-content">
-              <span class="hero__stat-label">Monthly Visitors</span>
-              <span class="hero__stat-value">1,200,000</span>
-            </div>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-icon pulse-purple">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </span>
-            <div class="hero__stat-content">
-              <span class="hero__stat-label">Avg. Visit Duration</span>
-              <span class="hero__stat-value">3 mins 45 secs</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="winner-detail__why">
-          <h2>Why It's LP Of The Day</h2>
-          <p>Exceptional UX pattern library. The search and filtering experience is world-class, and the design showcases mobile patterns beautifully.</p>
-        </div>
-
-        <div class="winner-detail__actions">
-          <a href="https://www.mobbin.com?ref=landingpageoftheday" class="btn btn--shimmer" target="_blank" rel="noopener">Visit Page</a>
-          <a href="/" class="btn btn--secondary">Back to Today's Pick</a>
-        </div>
-
-        <!-- Prev / Next navigation -->
-        <div class="winner-detail__nav">
-          <a href="/winner/shorturl-com/">&larr; Shorturl.com</a>
-          <a href="/winner/galileo14/">Galileo14 &rarr;</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__top">
-        <a href="/" class="footer__logo">
-          <img src="https://lpl-client-research.b-cdn.net/lp-of-the-day/logo.avif" alt="Landing Page of the Day">
-        </a>
-        <div class="footer__links">
-          <a href="/form/">Submit a Landing Page</a>
-          <a href="/privacy-policy/">Privacy Policy</a>
-          <a href="/terms/">Terms</a>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__credit">Built by <a href="https://www.landingpagelabs.co/?ref=landingpageoftheday" target="_blank" rel="noopener">Landing Page Labs</a></p>
-        <p class="footer__copyright">&copy; 2026 Landing Page of the Day</p>
-        <p class="footer__disclaimer">Note: this site uses affiliate links for sponsored posts.</p>
-      </div>
-    </div>
-  </footer>
 
   <script src="/app.js"></script>
 </body>
