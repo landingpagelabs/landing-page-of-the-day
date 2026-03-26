@@ -90,9 +90,16 @@
 
 /* Infinite scroll handles visibility via JS now */
 
-/* Hero screenshot: always show from the top of the page, not center-cropped */
+/* Hero screenshot: scrollable frame showing from top */
+.hero_block-image-full {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+}
 .hero_block-img-full {
-  object-position: top !important;
+  object-fit: none !important;
+  width: 100% !important;
+  height: auto !important;
 }
 
 /* Winner card screenshots: crop to hero section only */
@@ -109,13 +116,26 @@
   display: block;
 }
 
-/* Winner card date badge */
+/* Winner card hover state */
+.winners_list-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.winners_list-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+.winners_list-item:hover .winners_list-item-img {
+  opacity: 0.92;
+}
+
+/* Winner card date badge — centered with spacing */
 .winners_list-item-date {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  padding: 10px 14px;
-  border-top: 1px solid #f0f0f0;
+  padding: 12px 14px;
+  margin-top: 8px;
 }
 
 /* Mobile improvements */
@@ -465,12 +485,16 @@
   .newsletter_btn { width: 100%; }
 }
 
-/* Social sharing on winner pages */
-.inner-page__share { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
-.inner-page__share-label { color: #787878; font-size: 0.875rem; }
+/* Winner detail actions row: Visit LP left, Share right */
+.inner-page__actions {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 32px; padding-top: 8px;
+}
+.inner-page__share { display: flex; align-items: center; gap: 8px; }
+.inner-page__share-label { color: #787878; font-size: 0.8125rem; }
 .inner-page__share-link {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px; border-radius: 8px; border: 1px solid #e0e0e0;
+  width: 32px; height: 32px; border-radius: 6px; border: 1px solid #e0e0e0;
   color: #787878; transition: all 0.2s;
 }
 .inner-page__share-link:hover { border-color: #1a1a1a; color: #1a1a1a; }

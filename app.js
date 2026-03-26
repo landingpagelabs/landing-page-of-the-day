@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function setActive(index) {
       items.forEach(function (el) { el.classList.remove('active'); });
       items[index].classList.add('active');
-      bindNavButtons();
     }
 
     function goTo(index) {
@@ -21,26 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
       setActive(currentIndex);
     }
 
-    function bindNavButtons() {
-      // Bind Previous on the active item
-      var activeBlock = items[currentIndex];
-      var prevBtn = activeBlock.querySelector('.hero_block-content-prev');
+    // Bind all prev/next buttons upfront (use closure to always read currentIndex)
+    items.forEach(function (item) {
+      var prevBtn = item.querySelector('.hero_block-content-prev');
+      var nextBtn = item.querySelector('.hero_block-content-next');
       if (prevBtn) {
-        prevBtn.onclick = function (e) {
+        prevBtn.addEventListener('click', function (e) {
           e.preventDefault();
+          e.stopPropagation();
           goTo(currentIndex - 1);
-        };
+        });
       }
-
-      // Bind Next on the active item
-      var nextBtn = activeBlock.querySelector('.hero_block-content-next');
       if (nextBtn) {
-        nextBtn.onclick = function (e) {
+        nextBtn.addEventListener('click', function (e) {
           e.preventDefault();
+          e.stopPropagation();
           goTo(currentIndex + 1);
-        };
+        });
       }
-    }
+    });
 
     // "Return To Today" buttons -> go back to first item
     document.querySelectorAll('[data-new-cms]').forEach(function (btn) {
