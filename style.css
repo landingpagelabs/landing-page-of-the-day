@@ -90,16 +90,17 @@
 
 /* Infinite scroll handles visibility via JS now */
 
-/* Hero screenshot: scrollable frame showing from top */
+/* Hero screenshot: scrollable within the fixed-height container */
 .hero_block-image-full {
   overflow-y: auto !important;
   overflow-x: hidden !important;
   -webkit-overflow-scrolling: touch;
 }
 .hero_block-img-full {
-  object-fit: none !important;
+  object-fit: unset !important;
   width: 100% !important;
   height: auto !important;
+  display: block !important;
 }
 
 /* Winner card screenshots: crop to hero section only */
