@@ -499,6 +499,7 @@
   color: #787878; transition: all 0.2s;
 }
 .inner-page__share-link:hover { border-color: #1a1a1a; color: #1a1a1a; }
+button.inner-page__share-link { background: none; cursor: pointer; font: inherit; padding: 0; }
 
 /* Winner page CTA block */
 .winner-cta {

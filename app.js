@@ -149,6 +149,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // ----- Copy Link Button -----
+  document.querySelectorAll('[data-copy-url]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var url = btn.getAttribute('data-copy-url');
+      navigator.clipboard.writeText(url).then(function () {
+        var originalHTML = btn.innerHTML;
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+        btn.style.borderColor = '#1a1a1a';
+        btn.style.color = '#1a1a1a';
+        setTimeout(function () {
+          btn.innerHTML = originalHTML;
+          btn.style.borderColor = '';
+          btn.style.color = '';
+        }, 1500);
+      });
+    });
+  });
+
 });
 
 // ----- Favicon Change on Tab Switch -----
