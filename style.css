@@ -90,24 +90,28 @@
 
 /* Infinite scroll handles visibility via JS now */
 
-/* Hero carousel Next button (mirrors Previous) */
+/* Hero screenshot: always show from the top of the page, not center-cropped */
+.hero_block-img-full {
+  object-position: top !important;
+}
+
+/* Hero carousel nav bar cleanup */
+.hero_block-content-head {
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+
+.hero_block-content-prev-wrap {
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+}
+
+/* Next button (mirrors Previous) */
 .hero_block-content-next {
   display: flex; align-items: center; gap: 6px; cursor: pointer;
   transition: opacity 0.2s;
 }
 .hero_block-content-next:hover { opacity: 0.7; }
-
-/* Keyboard hint */
-.hero_keyboard-hint {
-  display: flex; align-items: center; justify-content: center;
-  gap: 8px; margin-top: 12px; opacity: 0.5;
-}
-.hero_keyboard-hint kbd {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-width: 24px; height: 24px; padding: 0 6px;
-  background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px;
-  font-size: 11px; font-family: inherit; color: #787878;
-}
 
 .hero-form_input:focus {
   border-color: #1A1A1A;
