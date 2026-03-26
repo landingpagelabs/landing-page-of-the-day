@@ -75,20 +75,26 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
-  border-radius: 100px;
-  border: 1px solid #e0e0e0;
-  transition: all 0.2s;
+  width: max-content;
   white-space: nowrap;
+  transition: all 0.4s;
 }
-.header_cta:hover { border-color: #1a1a1a; }
+.header_cta:hover { opacity: 0.6; }
+.header_cta.white {
+  background-color: #ebebeb;
+  border: 1px none transparent;
+  border-radius: 10px;
+  min-height: 48px;
+  padding: 10px 14px;
+}
 .header_cta.black {
-  background: #1a1a1a;
-  border-color: #1a1a1a;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  min-height: 48px;
+  padding: 10px 14px;
   color: #fff;
 }
-.header_cta.black:hover { background: #333; }
-.header_cta.footer { font-size: 0.75rem; padding: 7px 14px; }
+.header_cta.footer { font-size: 0.75rem; min-height: auto; padding: 10px 14px; }
 
 /* Mobile Menu */
 .menu_icon-wrap { display: none; cursor: pointer; z-index: 9999; position: relative; }
@@ -414,13 +420,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* Main CTA Button */
 .cta-block { display: flex; flex-direction: column; align-items: center; width: 100%; }
-.cta-main-wrap { margin-bottom: 24px; }
+.cta-main-wrap {
+  background-image: linear-gradient(135deg, #ff6b35, #ee4d2d);
+  border-radius: 20px;
+  width: max-content;
+  padding: 5px;
+  margin-bottom: 24px;
+  box-shadow: 0 7.56px 21.18px rgba(238,77,45,0.32), 0 33.28px 39.34px rgba(238,77,45,0.28), 0 74.13px 52.95px rgba(238,77,45,0.16), 0 131.63px 63.54px rgba(238,77,45,0.05);
+}
 .cta-main {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  background-image: linear-gradient(#8055ff, #3b08d0);
   color: #fff;
   letter-spacing: .015em;
   cursor: pointer;
