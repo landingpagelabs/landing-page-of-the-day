@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
       setActive(currentIndex);
     }
 
-    // Bind all prev/next buttons upfront (use closure to always read currentIndex)
+    // Data is sorted newest-first, so:
+    //   ← (prev arrow) = go to previous day = higher index (older)
+    //   → (next arrow) = go to next day = lower index (newer)
     items.forEach(function (item) {
       var prevBtn = item.querySelector('.hero_block-content-prev');
       var nextBtn = item.querySelector('.hero_block-content-next');
@@ -28,14 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
         prevBtn.addEventListener('click', function (e) {
           e.preventDefault();
           e.stopPropagation();
-          goTo(currentIndex - 1);
+          goTo(currentIndex + 1);
         });
       }
       if (nextBtn) {
         nextBtn.addEventListener('click', function (e) {
           e.preventDefault();
           e.stopPropagation();
-          goTo(currentIndex + 1);
+          goTo(currentIndex - 1);
         });
       }
     });
@@ -48,12 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Keyboard navigation (left/right arrows)
+    // Keyboard: left = older (prev day), right = newer (next day)
     document.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowLeft') {
-        goTo(currentIndex - 1);
-      } else if (e.key === 'ArrowRight') {
         goTo(currentIndex + 1);
+      } else if (e.key === 'ArrowRight') {
+        goTo(currentIndex - 1);
       }
     });
 
