@@ -13,13 +13,13 @@ Landing Page of the Day is a free resource owned and operated by Landing Page La
 
 ## Featured Landing Pages
 
-- Shorturl.com: https://www.landingpageoftheday.com/winner/shorturl-com/
-- Mobbin: https://www.landingpageoftheday.com/winner/mobbin/
-- Galileo14: https://www.landingpageoftheday.com/winner/galileo14/
-- Swayyem: https://www.landingpageoftheday.com/winner/swayyem/
-- SimpleBooklet: https://www.landingpageoftheday.com/winner/simplebooklet/
-- C17.ai: https://www.landingpageoftheday.com/winner/c17-ai/
-- RecruitCloud: https://www.landingpageoftheday.com/winner/recruitcloud/
+- Notion: https://www.landingpageoftheday.com/winner/notion/
+- Linear: https://www.landingpageoftheday.com/winner/linear/
+- Clay: https://www.landingpageoftheday.com/winner/clay/
+- Woodpecker: https://www.landingpageoftheday.com/winner/woodpecker/
+- Jasper: https://www.landingpageoftheday.com/winner/jasper/
+- Deel: https://www.landingpageoftheday.com/winner/deel/
+- ActiveCampaign: https://www.landingpageoftheday.com/winner/activecampaign/
 
 ## Contact
 
