@@ -95,6 +95,55 @@
   object-position: top !important;
 }
 
+/* Winner card screenshots: constrain height, show from top */
+.winners_list-item-image {
+  height: 280px;
+  overflow: hidden;
+}
+.winners_list-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Prev/Next arrows: enlarge tap targets on mobile */
+@media (max-width: 767px) {
+  .hero_block-content-prev,
+  .hero_block-content-next {
+    padding: 14px;
+    margin: -14px;
+  }
+
+  /* Hero nav: Return To Today link needs bigger tap target */
+  .hero_block-content-cta-wrap a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Winner card external link arrow: bigger tap target */
+  .winners_list-item-link {
+    padding: 12px;
+    margin: -12px;
+  }
+
+  /* Winner card name link */
+  .winners_list-item-head-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Hero head links */
+  .hero_block-head-url-link,
+  .hero_block-head-link {
+    min-height: 44px;
+    display: inline-flex !important;
+    align-items: center;
+  }
+}
+
 /* Hero carousel nav bar cleanup */
 .hero_block-content-head {
   flex-wrap: wrap !important;
