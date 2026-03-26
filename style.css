@@ -97,15 +97,16 @@
 
 /* Winner card screenshots: crop to hero section only */
 .winners_list-item-image {
-  height: 200px;
-  overflow: hidden;
+  display: block !important;
+  height: 200px !important;
+  max-height: 200px !important;
+  overflow: hidden !important;
+  position: relative;
 }
 .winners_list-item-img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
-  object-position: top;
 }
 
 /* Winner card date badge */
