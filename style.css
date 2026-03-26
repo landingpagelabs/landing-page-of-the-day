@@ -149,7 +149,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   padding-left: 10.5px;
   padding-right: 10.5px;
 }
-.hero_block-image { width: 32px; height: 32px; border-radius: 8px; overflow: hidden; flex-shrink: 0; }
+.hero_block-image { width: 32px; height: 32px; flex-shrink: 0; }
 .hero_block-img { width: 100%; height: 100%; object-fit: cover; }
 .hero_block-head-url-link { display: inline-flex; gap: 8px; align-items: center; }
 .hero_block-head-url { font-size: 0.9375rem; font-weight: 500; color: #1a1a1a; }
@@ -288,7 +288,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   padding-right: 10px;
   position: relative;
 }
-.winnters_controls-image { width: 28px; height: 28px; border-radius: 6px; overflow: hidden; flex-shrink: 0; }
+.winnters_controls-image { width: 28px; height: 28px; flex-shrink: 0; }
 .winnters_controls-img { width: 100%; height: 100%; object-fit: cover; }
 .winners_list-item-head-link { flex: 1; min-width: 0; display: flex; align-items: center; gap: 6px; }
 .winners_list-item-head-text { font-size: 0.9375rem; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
