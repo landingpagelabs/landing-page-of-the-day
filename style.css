@@ -497,8 +497,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   margin-bottom: 12px;
   flex-wrap: wrap;
 }
-.cta_block-image { width: 100%; max-width: 130px; display: flex; align-items: center; }
-.cta_block-img { width: 100%; }
+.cta_block-image { display: flex; align-items: center; }
+.cta_block-image-2 { width: 24px; }
+.cta_block-img { height: 30px; width: auto; }
 .cta_block-img.mobile { display: none; }
 .cta_block-img.mobile-arrow { display: none; }
 .cta_block-img.desktop-hide { display: none; }
