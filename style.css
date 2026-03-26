@@ -95,20 +95,23 @@
   object-position: top !important;
 }
 
-/* Winner card screenshots: constrain height, show from top */
+/* Winner card screenshots: scrollable frame, show from top */
 .winners_list-item-image {
-  height: 280px;
-  overflow: hidden;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0 0 10px 10px;
 }
 .winners_list-item-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
+  height: auto;
+  display: block;
 }
 
-/* Prev/Next arrows: enlarge tap targets on mobile */
+/* Mobile improvements */
 @media (max-width: 767px) {
+  /* Prev/Next arrows: enlarge tap targets */
   .hero_block-content-prev,
   .hero_block-content-next {
     padding: 14px;
@@ -141,6 +144,66 @@
     min-height: 44px;
     display: inline-flex !important;
     align-items: center;
+  }
+
+  /* "Why" info item: stack label + text vertically so text isn't cramped */
+  .hero_block-content-info-item.last {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px;
+  }
+  .hero_block-content-info-item.last .hero_block-content-info-text-wrap,
+  .hero_block-content-info-item.last .body-regular {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* All stat rows: ensure label and value don't cramp */
+  .hero_block-content-info-item {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  /* Footer buttons: stack full-width on mobile */
+  .footer_menu {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .footer_menu .header_cta {
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Winner cards: slightly taller on mobile for better preview */
+  .winners_list-item-image {
+    height: 220px;
+  }
+
+  /* Winner detail page: stack CTA buttons vertically */
+  .inner-page__cta-wrap {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .inner-page__cta-wrap a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Winner detail page: share buttons larger */
+  .inner-page__share-link {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Winner detail CTA block: tighter padding */
+  .winner-cta {
+    padding: 24px 16px;
+  }
+  .winner-cta__btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -262,11 +325,59 @@
   }
 }
 
+/* Winner detail: two-column layout (details left, screenshot right) */
+.winner-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+.winner-detail__info {
+  position: sticky;
+  top: 80px;
+}
+.winner-detail__screenshot {
+  border-radius: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  max-height: 80vh;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+.winner-detail__screenshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .winner-detail {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .winner-detail__info {
+    position: static;
+  }
+  .winner-detail__screenshot {
+    max-height: 500px;
+    order: -1; /* screenshot first on mobile */
+  }
+}
+
+@media (max-width: 479px) {
+  .winner-detail__screenshot {
+    max-height: 400px;
+  }
+}
+
 /* Inner pages (winner detail, form, legal) */
 .inner-page { padding: 60px 0 80px; }
 .inner-page__back { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 24px; color: #787878; transition: color 0.2s; }
 .inner-page__back:hover { color: #1a1a1a; }
 .inner-page__title { font-size: 2rem; font-weight: 600; margin-bottom: 24px; }
+/* Legacy screenshot class kept for backwards compat */
 .inner-page__screenshot { border-radius: 12px; overflow: hidden; border: 1px solid #e8e8e8; margin-bottom: 32px; }
 .inner-page__screenshot img { width: 100%; height: auto; }
 .inner-page__stats { display: flex; flex-direction: column; margin-bottom: 32px; }
