@@ -95,18 +95,26 @@
   object-position: top !important;
 }
 
-/* Winner card screenshots: scrollable frame, show from top */
+/* Winner card screenshots: crop to hero section only */
 .winners_list-item-image {
-  height: 300px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  border-radius: 0 0 10px 10px;
+  height: 200px;
+  overflow: hidden;
 }
 .winners_list-item-img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Winner card date badge */
+.winners_list-item-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-top: 1px solid #f0f0f0;
 }
 
 /* Mobile improvements */
@@ -175,9 +183,9 @@
     justify-content: center;
   }
 
-  /* Winner cards: slightly taller on mobile for better preview */
+  /* Winner cards: crop hero on mobile */
   .winners_list-item-image {
-    height: 220px;
+    height: 180px;
   }
 
   /* Winner detail page: stack CTA buttons vertically */
