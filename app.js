@@ -1,67 +1,122 @@
 /* ============================================================
    Landing Page of the Day — Client-side JS
-   Hero carousel, load more, mobile menu, favicon, title flash
+   Hero carousel, infinite scroll, mobile menu, dynamic dates
    ============================================================ */
 
 document.addEventListener("DOMContentLoaded", function () {
 
   // ----- Hero Carousel -----
-  const items = Array.from(document.querySelectorAll('.hero_block-item'));
+  var items = Array.from(document.querySelectorAll('.hero_block-item'));
   if (items.length) {
-    let currentIndex = 0;
+    var currentIndex = 0;
 
     function setActive(index) {
       items.forEach(function (el) { el.classList.remove('active'); });
       items[index].classList.add('active');
+      bindNavButtons();
     }
 
-    function bindPrevButton() {
+    function goTo(index) {
+      currentIndex = (index + items.length) % items.length;
+      setActive(currentIndex);
+    }
+
+    function bindNavButtons() {
+      // Bind Previous on the active item
       var activeBlock = items[currentIndex];
       var prevBtn = activeBlock.querySelector('.hero_block-content-prev');
-      if (!prevBtn) return;
+      if (prevBtn) {
+        prevBtn.onclick = function (e) {
+          e.preventDefault();
+          goTo(currentIndex - 1);
+        };
+      }
 
-      prevBtn.onclick = function (e) {
-        e.preventDefault();
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-        setActive(currentIndex);
-        bindPrevButton();
-      };
+      // Bind Next on the active item
+      var nextBtn = activeBlock.querySelector('.hero_block-content-next');
+      if (nextBtn) {
+        nextBtn.onclick = function (e) {
+          e.preventDefault();
+          goTo(currentIndex + 1);
+        };
+      }
     }
 
     // "Return To Today" buttons -> go back to first item
-    var newCmsButtons = document.querySelectorAll('[data-new-cms]');
-    newCmsButtons.forEach(function (btn) {
+    document.querySelectorAll('[data-new-cms]').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
-        currentIndex = 0;
-        setActive(currentIndex);
-        bindPrevButton();
+        goTo(0);
       });
+    });
+
+    // Keyboard navigation (left/right arrows)
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') {
+        goTo(currentIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        goTo(currentIndex + 1);
+      }
     });
 
     // Init
     setActive(currentIndex);
-    bindPrevButton();
   }
 
-  // ----- Winners Load More -----
-  var btn = document.querySelector(".winners_list-cta");
+  // ----- Winners Infinite Scroll -----
   var list = document.querySelector(".winners_list");
-  var icon = document.querySelector(".winners_list-icon-plus");
-  var text = document.querySelector(".label-medium.cta");
+  var hiddenItems = list ? list.querySelectorAll(".winners_list-item") : [];
+  var loadMoreBtn = document.querySelector(".winners_list-cta");
+  var BATCH_SIZE = 6;
+  var revealedCount = 0;
 
-  if (btn && list) {
-    btn.addEventListener("click", function () {
-      var isOpen = list.classList.toggle("_show-all");
+  function revealBatch() {
+    var end = Math.min(revealedCount + BATCH_SIZE, hiddenItems.length);
+    for (var i = revealedCount; i < end; i++) {
+      hiddenItems[i].style.display = '';
+    }
+    revealedCount = end;
 
-      if (icon) {
-        icon.classList.toggle("active", isOpen);
-      }
+    // Hide the sentinel and button when all revealed
+    if (revealedCount >= hiddenItems.length) {
+      if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+      if (sentinel) sentinel.style.display = 'none';
+    }
+  }
 
-      if (text) {
-        text.textContent = isOpen ? "Show less" : "Load more";
-      }
+  // Create an invisible sentinel element after the grid
+  var sentinel = null;
+  if (list && hiddenItems.length > BATCH_SIZE) {
+    sentinel = document.createElement('div');
+    sentinel.className = 'winners_scroll-sentinel';
+    sentinel.style.height = '1px';
+    list.parentNode.insertBefore(sentinel, list.nextSibling);
+
+    // Use IntersectionObserver for infinite scroll
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting && revealedCount < hiddenItems.length) {
+          revealBatch();
+        }
+      }, { rootMargin: '200px' });
+      observer.observe(sentinel);
+    }
+
+    // Also keep the load more button as fallback
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', function () {
+        revealBatch();
+      });
+    }
+
+    // Initially show first batch, hide the rest
+    hiddenItems.forEach(function (item, i) {
+      if (i >= BATCH_SIZE) item.style.display = 'none';
     });
+    revealedCount = BATCH_SIZE;
+  } else if (loadMoreBtn) {
+    // Fewer items than batch size — hide the button
+    loadMoreBtn.style.display = 'none';
   }
 
   // ----- Mobile Menu -----
@@ -110,4 +165,3 @@ document.addEventListener("visibilitychange", function () {
     favicon.href = standardFavicon;
   }
 });
-
