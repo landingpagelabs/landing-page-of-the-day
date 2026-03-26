@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Shorturl.com",
+    "slug": "shorturl-com",
+    "url": "https://www.shorturl.com",
+    "screenshot_url": "https://lpl-client-research.b-cdn.net/lp-of-the-day/shorturl-com.png",
+    "built_on": "Webflow",
+    "monthly_visitors": "110,000",
+    "avg_visit_duration": "0 mins 59 secs",
+    "date_featured": "2026-01-27"
+  },
+  {
+    "name": "Mobbin",
+    "slug": "mobbin",
+    "url": "https://www.mobbin.com",
+    "screenshot_url": "https://lpl-client-research.b-cdn.net/lp-of-the-day/mobbin.png",
+    "built_on": "Custom",
+    "monthly_visitors": "1,200,000",
+    "avg_visit_duration": "3 mins 45 secs",
+    "date_featured": "2026-01-26"
+  },
+  {
+    "name": "Galileo14",
+    "slug": "galileo14",
+    "url": "https://www.galileo14.com",
+    "screenshot_url": "https://lpl-client-research.b-cdn.net/lp-of-the-day/galileo14.png",
+    "built_on": "Webflow",
+    "monthly_visitors": "45,000",
+    "avg_visit_duration": "2 mins 10 secs",
+    "date_featured": "2026-01-25"
+  },
+  {
+    "name": "Swayyem",
+    "slug": "swayyem",
+    "url": "https://www.swayyem.com",
+    "screenshot_url": "https://lpl-client-research.b-cdn.net/lp-of-the-day/swayyem.png",
+    "built_on": "WordPress",
+    "monthly_visitors": "78,000",
+    "avg_visit_duration": "1 min 50 secs",
+    "date_featured": "2026-01-24"
+  },
+  {
+    "name": "SimpleBooklet",
+    "slug": "simplebooklet",
+    "url": "https://www.simplebooklet.com",
+    "screenshot_url": "https://lpl-client-research.b-cdn.net/lp-of-the-day/simplebooklet.png",
+    "built_on": "Custom",
+    "monthly_visitors": "320,000",
+    "avg_visit_duration": "2 mins 30 secs",
+    "date_featured": "2026-01-23"
+  },
+  {
+    "name": "C17.ai",
+    "slug": "c17-ai",
+    "url": "https://www.c17.ai",
+    "screenshot_url": "https://lpl-client-research.b-cdn.net/lp-of-the-day/c17-ai.png",
+    "built_on": "Framer",
+    "monthly_visitors": "55,000",
+    "avg_visit_duration": "3 mins 15 secs",
+    "date_featured": "2026-01-22"
+  },
+  {
+    "name": "RecruitCloud",
+    "slug": "recruitcloud",
+    "url": "https://www.recruitcloud.io",
+    "screenshot_url": "https://lpl-client-research.b-cdn.net/lp-of-the-day/recruitcloud.png",
+    "built_on": "Webflow",
+    "monthly_visitors": "42,000",
+    "avg_visit_duration": "2 mins 05 secs",
+    "date_featured": "2026-01-21"
+  }
+]
