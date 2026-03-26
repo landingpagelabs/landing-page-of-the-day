@@ -242,3 +242,73 @@
 .legal-page ul { margin-bottom: 16px; padding-left: 20px; }
 .legal-page li { margin-bottom: 8px; color: #555; line-height: 1.7; }
 .legal-page a { color: #1a1a1a; text-decoration: underline; }
+
+/* Newsletter section */
+.section_newsletter { padding: 40px 0; }
+.newsletter_wrapper {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 40px; padding: 40px 48px; background: #fafafa;
+  border-radius: 16px; border: 1px solid #e8e8e8;
+}
+.newsletter_content { flex: 1; }
+.newsletter_content .heading-2 { margin-bottom: 8px; }
+.newsletter_content .body-regular { max-width: 400px; }
+.newsletter_form { flex-shrink: 0; }
+.newsletter_input-wrap { display: flex; gap: 8px; }
+.newsletter_input {
+  padding: 10px 16px; border: 1px solid #e0e0e0; border-radius: 100px;
+  font-size: 0.875rem; font-family: inherit; width: 260px;
+  transition: border-color 0.2s;
+}
+.newsletter_input:focus { border-color: #1a1a1a; outline: none; }
+.newsletter_btn {
+  padding: 10px 24px; background: #1a1a1a; color: #fff; border: none;
+  border-radius: 100px; font-size: 0.875rem; font-weight: 500;
+  cursor: pointer; transition: background 0.2s; white-space: nowrap;
+}
+.newsletter_btn:hover { background: #333; }
+
+@media (max-width: 767px) {
+  .newsletter_wrapper {
+    flex-direction: column; gap: 24px; padding: 28px 20px;
+    text-align: center;
+  }
+  .newsletter_content .body-regular { max-width: none; }
+  .newsletter_input-wrap { flex-direction: column; width: 100%; }
+  .newsletter_input { width: 100%; }
+  .newsletter_btn { width: 100%; }
+}
+
+/* Social sharing on winner pages */
+.inner-page__share { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
+.inner-page__share-label { color: #787878; font-size: 0.875rem; }
+.inner-page__share-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 8px; border: 1px solid #e0e0e0;
+  color: #787878; transition: all 0.2s;
+}
+.inner-page__share-link:hover { border-color: #1a1a1a; color: #1a1a1a; }
+
+/* Winner page CTA block */
+.winner-cta {
+  padding: 40px; background: #fafafa; border-radius: 16px;
+  border: 1px solid #e8e8e8; text-align: center; margin-bottom: 32px;
+}
+.winner-cta__title { font-size: 1.25rem; font-weight: 600; margin-bottom: 8px; }
+.winner-cta__text { color: #787878; margin-bottom: 20px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.winner-cta__btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; background: #1a1a1a; color: #fff;
+  border-radius: 100px; font-size: 0.875rem; font-weight: 500;
+  transition: background 0.2s;
+}
+.winner-cta__btn:hover { background: #333; }
+
+@media (max-width: 767px) {
+  .winner-cta { padding: 28px 20px; }
+}
+
+/* 404 page */
+.page-404 { text-align: center; padding: 120px 0 160px; }
+.page-404__title { font-size: 4rem; font-weight: 700; margin-bottom: 16px; }
+.page-404__text { color: #787878; margin-bottom: 32px; }
